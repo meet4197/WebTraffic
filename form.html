@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Analyzing Web Traffic | Index Page</title>
+<title>Analyzing Web Traffic</title>
 <link rel="shortcut icon" href="https://assets2.conestogac.on.ca/images/corporate/global/misc/favicon.ico" />
 <meta name="description" content="This homepage is a part of constantines sample site built to implement Google Analytics">
 <meta name="author" content="Constantine">
@@ -11,15 +11,6 @@
 <keyword>
 
 </keyword>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-P4BRVSP');</script>
-	<!-- End Google Tag Manager -->
-
-
 <!--[if lt IE 9]>
 <script src="//im.altervista.org/site_index/html5shiv.js"></script>
 <![endif]-->
@@ -36,7 +27,13 @@ This is the angular minified library
 
   gtag('config', 'UA-147158386-1');
 </script>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-P4BRVSP');</script>
+	<!-- End Google Tag Manager -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <!-- 
@@ -48,15 +45,15 @@ Bootstrap Required style and javascript
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
-		var app = angular.module("HomeApp", []);
-		app.controller("HomeController", function($scope) {
+		var app = angular.module("FormApp", []);
+		app.controller("FormController", function($scope) {
 			$scope.name = "Constantine";
-			$scope.pageName = "Home";
+			$scope.pageName = "Form";
 		});
 	</script>
 </head>
 <body>
-	<div ng-app="HomeApp" ng-controller="HomeController">
+	<div ng-app="FormApp" ng-controller="FormController">
 		<nav id="WebsiteNavigation" class="navbar navbar-expand-sm bg-light">
 			<a class="navbar-brand" href="#">
 				<img src="https://assets2.conestogac.on.ca/images/corporate/global/header/logo/conestoga-logo.jpg" alt="Logo" >
@@ -72,9 +69,6 @@ Bootstrap Required style and javascript
 					<a class="nav-link" href="contact.html">Contact</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="form.html">Analytics Form</a>
-				  </li>
-				  <li class="nav-item">
 					<h4>Hello {{name}}</h4>
 				  </li>
 				  
@@ -85,9 +79,36 @@ Bootstrap Required style and javascript
  
 			<p>Who is viewing the {{pageName}} page:</p>
 			<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-			
-			<iframe id="CatVideoForEvent" width="560" height="315" src="https://www.youtube.com/embed/a5V6gdu5ih8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		
+            
+            
+
+
+	  </div>
+	  <div class="container">
+		<h2> Newsletter Subscription Form </h2>
+		<p>In this example, we use <code>Google Analytics </code> to track our form submission:</p>
+		<form action="./thankyou.html" method="POST" class="was-validated">
+		  <div class="form-group">
+			<label for="uname">Name:</label>
+			<input type="text" class="form-control" id="uname" placeholder="{{name}}" name="uname" value="{{name}}" required>
+			<div class="valid-feedback">Valid.</div>
+			<div class="invalid-feedback">Please fill out this field.</div>
+		  </div>
+		  <div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" placeholder="Enter Email" name="email" required>
+			<div class="valid-feedback">Valid.</div>
+			<div class="invalid-feedback">Please fill out this field.</div>
+		  </div>
+		  <div class="form-group form-check">
+			<label class="form-check-label">
+			  <input class="form-check-input" type="checkbox" name="remember" required> I agree to google Analytics tracking things
+			  <div class="valid-feedback">Valid.</div>
+			  <div class="invalid-feedback">Check this checkbox to continue.</div>
+			</label>
+		  </div>
+		  <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+		</form>
 	  </div>
 	  
 	<!-- Footer -->

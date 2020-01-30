@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Analyzing Web Traffic | Index Page</title>
+<title>Analyzing Web Traffic</title>
 <link rel="shortcut icon" href="https://assets2.conestogac.on.ca/images/corporate/global/misc/favicon.ico" />
 <meta name="description" content="This homepage is a part of constantines sample site built to implement Google Analytics">
 <meta name="author" content="Constantine">
@@ -11,15 +11,6 @@
 <keyword>
 
 </keyword>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-P4BRVSP');</script>
-	<!-- End Google Tag Manager -->
-
-
 <!--[if lt IE 9]>
 <script src="//im.altervista.org/site_index/html5shiv.js"></script>
 <![endif]-->
@@ -27,6 +18,13 @@
 <!-- 
 This is the angular minified library
 -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P4BRVSP');</script>
+    <!-- End Google Tag Manager -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147158386-1"></script>
 <script>
@@ -36,7 +34,6 @@ This is the angular minified library
 
   gtag('config', 'UA-147158386-1');
 </script>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <!-- 
@@ -48,15 +45,15 @@ Bootstrap Required style and javascript
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script>
-		var app = angular.module("HomeApp", []);
-		app.controller("HomeController", function($scope) {
+		var app = angular.module("ThankYouApp", []);
+		app.controller("ThankYouAppController", function($scope) {
 			$scope.name = "Constantine";
-			$scope.pageName = "Home";
+			$scope.pageName = "Thank You";
 		});
 	</script>
 </head>
 <body>
-	<div ng-app="HomeApp" ng-controller="HomeController">
+	<div ng-app="ThankYouApp" ng-controller="ThankYouAppController">
 		<nav id="WebsiteNavigation" class="navbar navbar-expand-sm bg-light">
 			<a class="navbar-brand" href="#">
 				<img src="https://assets2.conestogac.on.ca/images/corporate/global/header/logo/conestoga-logo.jpg" alt="Logo" >
@@ -72,9 +69,6 @@ Bootstrap Required style and javascript
 					<a class="nav-link" href="contact.html">Contact</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="form.html">Analytics Form</a>
-				  </li>
-				  <li class="nav-item">
 					<h4>Hello {{name}}</h4>
 				  </li>
 				  
@@ -85,8 +79,7 @@ Bootstrap Required style and javascript
  
 			<p>Who is viewing the {{pageName}} page:</p>
 			<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-			
-			<iframe id="CatVideoForEvent" width="560" height="315" src="https://www.youtube.com/embed/a5V6gdu5ih8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			Thank you for submiting the form. I sure hope you didnt come here from the footer because that would be bad and it would mess up our analytics!!! :(
 		
 	  </div>
 	  
